@@ -5,9 +5,13 @@
 #
 # Instruct the installer to copy your credentials to the
 # appropriate location.
+clean:
+	@echo "Cleaning Files"
+	@rm -rf cache/
+	@rm -f hello/credentials.ini
 
 install:
-	# Nothing installed
+	@(cp credentials.ini hello/credentials.ini)
 
 run:
 	@(cd hello; python3 hello.py)
